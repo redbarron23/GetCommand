@@ -13,5 +13,5 @@ func main() {
     if err != nil {
         log.Fatal("ERROR:", err)
     }
-    fmt.Printf("output is:\n", out)
+    fmt.Printf("%s", out)
 }
