@@ -2,8 +2,17 @@ pipeline {
   agent any
   stages {
     stage('go lint') {
-      steps {
-        sh ' /Users/jhourihane/work/bin/golint main.go'
+      parallel {
+        stage('go lint') {
+          steps {
+            sh ' /Users/jhourihane/work/bin/golint main.go'
+          }
+        }
+        stage('lint') {
+          steps {
+            sh '/usr/local/bin/go ling main.go'
+          }
+        }
       }
     }
     stage('go vet') {
