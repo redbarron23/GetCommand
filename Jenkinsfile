@@ -17,10 +17,20 @@ pipeline {
       }
     }
     stage('run executable') {
-      steps {
-        sh '''
+      parallel {
+        stage('run executable') {
+          steps {
+            sh '''
 
 echo $WORKSPACE'''
+          }
+        }
+        stage('') {
+          steps {
+            sh '''
+$WORKSPACE/GetCommand'''
+          }
+        }
       }
     }
   }
