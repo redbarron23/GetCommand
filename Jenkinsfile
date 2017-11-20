@@ -16,5 +16,10 @@ pipeline {
         sh '/usr/local/bin/go build'
       }
     }
+    stage('run executable') {
+      steps {
+        sh 'GetCommand'
+      }
+    }
   }
 }
