@@ -6,8 +6,8 @@ import (
 	"log"
 )
 
-// mess up on purpose
-//func main() {
+// fixed it in staging 
+func main() {
      cmd := GetCommand()
      out, err := exec.Command(cmd[0], cmd[1:]...).Output()
 
