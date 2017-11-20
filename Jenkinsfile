@@ -20,8 +20,7 @@ pipeline {
       steps {
         sh '''
 
-echo $WORKSPACE
-&& $WORKSPACE/GetCommand'''
+echo $WORKSPACE'''
       }
     }
   }
