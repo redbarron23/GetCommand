@@ -6,5 +6,10 @@ pipeline {
         sh ' /Users/jhourihane/work/bin/golint main.go'
       }
     }
+    stage('go vet') {
+      steps {
+        sh '/usr/local/bin/go vet'
+      }
+    }
   }
 }
