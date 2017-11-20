@@ -3,9 +3,9 @@ pipeline {
   stages {
     stage('go lint') {
       parallel {
-        stage('go lint') {
+        stage('git pull') {
           steps {
-            sh ' /Users/jhourihane/work/bin/golint main.go'
+            sh 'git pull'
           }
         }
         stage('lint') {
