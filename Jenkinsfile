@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('go lint') {
       steps {
-        sh ' golint main.go'
+        sh ' /Users/jhourihane/work/bin/golint main.go'
       }
     }
   }
