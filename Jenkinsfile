@@ -11,5 +11,10 @@ pipeline {
         sh '/usr/local/bin/go vet'
       }
     }
+    stage('go build') {
+      steps {
+        sh '/usr/local/bin build'
+      }
+    }
   }
 }
