@@ -10,7 +10,7 @@ pipeline {
         }
         stage('golint') {
           steps {
-            sh '/usr/local/bin/golint main.go'
+            sh '/Users/jhourihane/work/bin/golint main.go'
           }
         }
       }
