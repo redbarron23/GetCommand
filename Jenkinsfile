@@ -8,9 +8,9 @@ pipeline {
             sh 'git pull'
           }
         }
-        stage('lint') {
+        stage('golint') {
           steps {
-            sh '/usr/local/bin/go lint main.go'
+            sh '/usr/local/bin/golint main.go'
           }
         }
       }
