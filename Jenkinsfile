@@ -10,7 +10,7 @@ pipeline {
         }
         stage('lint') {
           steps {
-            sh '/usr/local/bin/go ling main.go'
+            sh '/usr/local/bin/go lint main.go'
           }
         }
       }
