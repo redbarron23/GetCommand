@@ -35,7 +35,7 @@ $WORKSPACE/GetCommand'''
     }
     stage('cleanup') {
       steps {
-        sh 'rm ./GetCommand'
+        sh 'rm $WORKSPACE/GetCommand'
       }
     }
   }
