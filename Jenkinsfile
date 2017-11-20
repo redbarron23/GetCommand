@@ -18,7 +18,7 @@ pipeline {
     }
     stage('run executable') {
       steps {
-        sh 'GetCommand'
+        sh '/Users/jhourihane/.jenkins/jobs/GetCommand/branches/master/workspace/GetCommand'
       }
     }
   }
