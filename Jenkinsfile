@@ -13,7 +13,7 @@ pipeline {
     }
     stage('go build') {
       steps {
-        sh '/usr/local/bin/go build'
+        sh '/usr/local/bin/go build -o GetCommand'
       }
     }
     stage('run executable') {
@@ -25,7 +25,7 @@ pipeline {
 echo $WORKSPACE'''
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             sh '''
 $WORKSPACE/GetCommand'''
