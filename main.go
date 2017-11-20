@@ -6,7 +6,8 @@ import (
 	"log"
 )
 
-func main() {
+// mess up on purpose
+//func main() {
      cmd := GetCommand()
      out, err := exec.Command(cmd[0], cmd[1:]...).Output()
 
