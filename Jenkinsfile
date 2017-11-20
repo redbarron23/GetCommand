@@ -13,7 +13,7 @@ pipeline {
     }
     stage('go build') {
       steps {
-        sh '/usr/local/bin build'
+        sh '/usr/local/bin/go build'
       }
     }
   }
